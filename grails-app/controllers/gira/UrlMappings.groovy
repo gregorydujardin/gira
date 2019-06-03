@@ -13,5 +13,12 @@ class UrlMappings {
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
         "404"(view: '/notFound')
+
+        "/user/$id/$action" {
+            controller= 'user'
+            constraints {
+                id nullable: false, blank: false
+            }
+        }
     }
 }

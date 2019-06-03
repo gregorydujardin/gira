@@ -15,12 +15,11 @@ class UserInterceptor {
     }
 
     boolean after() {
-        if (userTimeEnabled)
-            log.info("Total time of User action '${actionName}' : ${System.currentTimeMillis() - request.start} ms")
         true
     }
 
     void afterView() {
-        // no-op
+        if (userTimeEnabled)
+            log.info("Total time of User action '${actionName}' : ${System.currentTimeMillis() - request.start} ms")
     }
 }

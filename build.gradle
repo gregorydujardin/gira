@@ -77,4 +77,5 @@ tasks.withType(Test) {
 
 codenarc {
     config = resources.text.fromFile('codenarc-ruleset.groovy')
+    ignoreFailures = true
 }

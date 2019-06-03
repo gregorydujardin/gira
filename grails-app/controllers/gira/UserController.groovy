@@ -9,4 +9,9 @@ class UserController extends RestfulController {
     UserController() {
         super(User)
     }
+
+    def hello() {
+        User user = User.findById(params.id)
+        render "Hello ${user.fullname}"
+    }
 }

@@ -8,8 +8,13 @@ class User {
 
     String email
 
+    static mapping = {
+        version     false
+    }
+
     static constraints = {
-        login       nullable: false, blank: false
+        id          name: 'login', generator: 'assigned'
+        login       nullable: false, blank: false, unique: true
         fullname    nullable: false, blank: false
         email       nullable: false, email: true
     }

@@ -4,7 +4,7 @@ import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 import spock.lang.Unroll
 
-class UserSpec extends Specification implements DomainUnitTest<User> {
+class UserUnitSpec extends Specification implements DomainUnitTest<User> {
 
     def setup() {
     }
